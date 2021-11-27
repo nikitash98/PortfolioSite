@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+
+    <head>
+        <title>Niko's Webby</title>
+    </head>   
+    <div class="container">
+
+        
+
+        <div class="wrapper">
+            <div class="one griditem">
+                <a href = "{{url_for('experiences')}}"> EXPERIENCES</a>
+            </div>
+            <div class="two griditem">
+                WORK
+            </div>
+            <div class="three griditem">
+                ABOUT
+            </div>
+            <div class="four griditem">
+                CONTACT
+            </div>
+        </div>
+        <div class = "middle">
+            <img src = "{{url_for('static', filename='img/headtest.png')}}"> 
+            <div>
+                Fig 1. Designer at work.
+            </div>
+        </div>
+
+        
+    </div>
+</html>
