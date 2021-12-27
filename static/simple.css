@@ -1,0 +1,60 @@
+.head {
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-size: min(15vw, 15em);
+    font-weight: 800;
+    
+    margin: 0px;
+    line-height: min(13vw, 10em);
+}
+
+.head:hover{
+    color: white;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+  }
+
+canvas{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+a {
+    color:black;
+    text-decoration: none; /* no underline */
+}
+a:visited{
+    color:black;
+}
+.main {
+    z-index: 2;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    margin: 0px;
+    visibility: visible;
+}
+
+.caption {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 18pt;
+    font-weight: bold;
+    float:right;
+}
+
+.projectitem img {
+    width:100%;
+
+}
+.projectitem img:hover {
+    stroke-width: 3px;
+
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: min(10vw, 5em);
+}

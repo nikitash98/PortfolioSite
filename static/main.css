@@ -44,7 +44,6 @@
         transform: translate(-50%, -50%);
         align-items: center;
         align-content: center;
-        overflow: hidden;
     }
     .middle > img {
         height: 90%;
@@ -58,3 +57,33 @@
         height: 100vh;
         position: relative;
     }
+    .cross {
+        z-index: -3;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    a {
+        text-decoration: none;
+        color:black;
+    }
+    a:link {
+        color: red;
+    }
+      
+
+      
+    /* mouse over link */
+    a:hover {
+        text-decoration: line-through;
+    }
+      
+      /* selected link */
+    a:active {
+        color: blue;
+    }
+
+
+
+    
