@@ -1,11 +1,11 @@
 .head {
     font-family: acumin-pro, sans-serif;
     font-style: normal;
-    font-size: min(15vw, 15em);
+    font-size: min(10vw, 15em);
     font-weight: 800;
     
     margin: 0px;
-    line-height: min(13vw, 10em);
+    line-height: min(10vw, 10em);
 }
 
 .head:hover{
@@ -37,6 +37,11 @@ a:visited{
     visibility: visible;
 }
 
+.projectitem{
+    position: sticky;
+    top: 0px;
+}
+
 .caption {
     font-family: 'Times New Roman', Times, serif;
     font-style: normal;
@@ -47,14 +52,27 @@ a:visited{
 
 .projectitem img {
     width:100%;
+    
 
 }
 .projectitem img:hover {
     stroke-width: 3px;
 
+    webkit-filter: blur(10px); 
+    filter: blur(5px);
+
 }
 
 .text {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: min(10vw, 5em);
+    font-size: min(10vw, 3em);
+}
+
+.aboutimage {
+    width: 100%;
+}
+
+
+.otherprojectsitem img {
+    width: 100%;
 }
