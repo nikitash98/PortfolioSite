@@ -1,16 +1,21 @@
 .head {
-    font-family: acumin-pro, sans-serif;
+    font-family: poppins, sans-serif;
     font-style: normal;
-    font-size: min(10vw, 15em);
-    font-weight: 800;
+    font-size: min(8vw, 15em);
+    font-weight: 900;
     
     margin: 0px;
+    width: 100%;
+    overflow:scroll;
     line-height: min(10vw, 10em);
 }
 
+ {
+    background: black;
+}
 .head:hover{
     color: white;
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black;
   }
 
@@ -40,26 +45,32 @@ a:visited{
 .projectitem{
     position: sticky;
     top: 0px;
+    stroke-width: 3px;
 }
 
 .caption {
     font-family: 'Times New Roman', Times, serif;
+    font-family: poppins, sans-serif;
+    text-transform: uppercase;
     font-style: normal;
-    font-size: 18pt;
-    font-weight: bold;
-    float:right;
+    font-size: 20pt;
+    font-weight: lighter;
+    text-align:right;
+    margin: 5px;
+}
+.captiontest {
+    font-family: 'Times New Roman', Times, serif;
+    text-align:right;
+
 }
 
 .projectitem img {
     width:100%;
-    
 
 }
 .projectitem img:hover {
-    stroke-width: 3px;
+    border: solid 3px red ;
 
-    webkit-filter: blur(10px); 
-    filter: blur(5px);
 
 }
 
@@ -75,4 +86,40 @@ a:visited{
 
 .otherprojectsitem img {
     width: 100%;
+}
+
+.gallery img {
+    width :100%;
+}
+
+
+.projectcaption {
+    font-family: poppins, sans-serif;
+    font-size: 2vw;
+    font-weight: light;
+    color: black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  
+}
+
+.item{
+    font-family: poppins, sans-serif;
+    font-size: 3vw;
+    color: black;
+}
+
+.sidemenu {
+    transform-origin: 0px;
+
+    /*transform: rotate(90deg) translateX(0%); */
+    z-index: 3;
+    position: fixed;
+    width: 40vw;
+    right: 0px;
+    top: 0%;
+    background-color: white;
+}
+.containerleft{
 }
