@@ -1,22 +1,21 @@
 .head {
     font-family: poppins, sans-serif;
     font-style: normal;
-    font-size: min(8vw, 15em);
+    font-size: min(5vw, 10em);
     font-weight: 900;
-    
+    line-height: min(5vw, 10em);
     margin: 0px;
     width: 100%;
-    overflow:scroll;
-    line-height: min(10vw, 10em);
+    overflow:hidden;
 }
 
- {
-    background: black;
-}
+
 .head:hover{
+    /*
     color: white;
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black;
+    */
   }
 
 canvas{
@@ -36,8 +35,6 @@ a:visited{
 .main {
     z-index: 2;
     position: absolute;
-    top: -20px;
-    left: -10px;
     margin: 0px;
     visibility: visible;
 }
@@ -53,10 +50,21 @@ a:visited{
     font-family: poppins, sans-serif;
     text-transform: uppercase;
     font-style: normal;
-    font-size: 20pt;
+    font-weight:400;
+    font-size: 15pt;
     font-weight: lighter;
-    text-align:right;
+    text-align:left;
     margin: 5px;
+}
+.caption:hover {
+    color:red;
+}
+
+a:hover {
+    color: red;
+}
+a:active {
+    color: blue;
 }
 .captiontest {
     font-family: 'Times New Roman', Times, serif;
@@ -69,14 +77,12 @@ a:visited{
 
 }
 .projectitem img:hover {
-    border: solid 3px red ;
-
 
 }
 
-.text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: min(10vw, 3em);
+.abouttext {
+    font-family: poppins, Helvetica, sans-serif;
+    font-size: min(5vw, 2em);
 }
 
 .aboutimage {
@@ -92,22 +98,39 @@ a:visited{
     width :100%;
 }
 
-
+.column {
+    padding: 7px !important;
+}
 .projectcaption {
     font-family: poppins, sans-serif;
     font-size: 2vw;
     font-weight: light;
     color: black;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    vertical-align: middle;
+
+    /*top: 50%;*/
   
 }
-
+.ui.menu .item:before{
+    visibility: hidden !important;
+}
 .item{
     font-family: poppins, sans-serif;
-    font-size: 3vw;
-    color: black;
+    font-size: max(15px,1vw) !important;
+    padding: 20px !important;
+    margin: 0px !important;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 1) !important;
+
+}
+.active.item {
+    color: blue !important;
+    font-weight: 100px;
+}
+.menu {
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .sidemenu {
