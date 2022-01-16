@@ -18,10 +18,9 @@
 <div class="ui text compact fixed top menu">
     <a href = "../index.html" class="item" style = "visibility: visible;"> NS</a>
     <div class = "ui right menu">
-        <a href = "../index.html" class = "item">HOME</a>
-        <a href = "work.html"  class="item">PROJECTS</a>
-        <a  href = "about.html" class="item active">ABOUT</a>
-        <a href = "contact.html" class="item">CONTACT</a>
+        <a href = "/templates/work.html"  class="item">PROJECTS</a>
+        <a  href = "/templates/about.html" class="item active">ABOUT</a>
+        <a href = "/templates/contact.html" class="item">CONTACT</a>
     </div>
 
 </div>
@@ -43,15 +42,21 @@
         scene = new THREE.Scene();
         //scene.background = new THREE.Color( 0xFFFFFF );
 
-        const light = new THREE.DirectionalLight( 0xffffff );
-        light.position.set( 0, 2, 1).normalize();
+        const light = new THREE.PointLight( 0xFFFFFF, 1, 100 );
+        const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
+
+        light.position.set( 0, 20, 10);
+        light.intensity = 3;
+        const light2 = new THREE.AmbientLight( 0x404040 ); // soft white light
+        light2.intensity = 0;
+        scene.add( light2 );
 
         scene.add( light );
         let container = document.getElementById('canvasbox');
 
         camera = new THREE.PerspectiveCamera( 20, $(container).width() / $(container).height(), 1, 500 );
 
-        camera.position.y = 15;
+        camera.position.y = 2;
         camera.position.z = 20;
 
         scene.add( camera );
@@ -67,17 +72,21 @@
         container.appendChild( renderer.domElement );
 
         const loader = new THREE.GLTFLoader();
-        loader.load( '../static/3d/scene.gltf', function ( kmz ) {
+        loader.load( '../static/3d/prof.glb', function ( kmz ) {
 
             kmz.scene.position.y = 0.5;
-            kmz.scene.scale.set(.05, .05, .05);
+            kmz.scene.scale.set(13, 13, 13);
             scene.add( kmz.scene );
+            kmz.scene.traverse((o) => {
+  if (o.isMesh) o.material = material;
+});
             render();
 
         } );
 
         controls = new THREE.OrbitControls( camera, renderer.domElement );
         controls.addEventListener( 'change', render );
+        controls.enabled = false;
         controls.update();
 
         window.addEventListener( 'resize', onWindowResize );
@@ -85,9 +94,11 @@
 
     }
     function mouseMove(e) {
+        let part2 = e.clientY/window.innerHeight;
         let part = e.clientX/window.innerWidth;
-        console.log(part)
         camera.position.x = 20 * -part + 10;
+        camera.position.y = 10 * part2 + -2;
+
         controls.update()
 
         render();
@@ -116,21 +127,28 @@
 
     <div class = "row">
 
-    <div class="ten wide column">
-        <div id = "canvasbox" style = "height: 60%;" >
+    <div class="nine wide column">
+        <div id = "canvasbox" style = "height: 100%;" >
             <canvas></canvas>
-        <!--
-
-        <babylon model="../static/3d/scene.gltf"></babylon>
-                -->
-
+    </div>
+    </div>
+    <div class = "seven wide column">
+        <div class = "projectcaption">
+            <div class = "head">NIKITA SHTARKMAN</div>
+            My name is Nikita and I am a 3D artist, designer, and technologist. 
+            I am currently based in Baltimore and work at Under Armour as a 3D analyst.
+            You are now viewing a scan of my face.
+            
+        </div>
+        <br>
+        <div class = "projectcaption" style = "margin-top: 0px !important;">         My Personal Introduction for my SVA application is here:
+            <a href = "/templates/intro.html">LINK</a>
+        </div>
+    
+    </div>
     </div>
 
-        <div class = "head">NIKITA SHTARKMAN</div>
-    <div class = "abouttext">
-        is a 3D artist, designer, and technologist. I am based in Baltimore, and work at Under Armour as a 3D analyst.
-        
-    </div>
+
 
 
     </div>

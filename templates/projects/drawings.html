@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.typekit.net/jja2din.css">
+        <link rel= "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/simple.css">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+        <script src  = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.js"></script>
+    </head>
+    <script type="module">
+
+    // View an image.
+
+    // Then, show the image by clicking it, or call `viewer.show()`.
+    
+    // View a list of images.
+    // Note: All images within the container will be found by calling `element.querySelectorAll('img')`.
+    const gallery = new Viewer(document.getElementById('images'), {toolbar: 0});
+    // Then, show one image by click it, or call `gallery.show()`.
+
+    </script>
+
+<div class="ui text compact fixed top menu" >
+
+    <a href = "../../index.html" class = "item" style = "visibility: visible;">NS</a>
+
+    <div class = "ui right menu" style="background-color: transparent !important;">
+
+        <a href = "../work.html"  class="active item" >PROJECTS</a>
+
+        <a  href = "../about.html" class="item">ABOUT</a>
+        <a href = "../contact.html" class="item">CONTACT</a>
+    
+    </div>
+</div>
+
+    <div id = "images" class = "gallery">
+
+
+        <div class="ui stackable equal height two column grid container">
+            <div class = " column">
+                <img src = "../../static/img/work/drawings/Richter.png">
+            </div>
+            <div class = "column " >
+                <div class = "projectcaption">
+                    <div class = "head">A FEW DRAWINGS</div>
+                    Excerpts of small sketches from my sketchbook over the years.
+                 </div>
+            </div>
+        </div>
+        <div class="ui stackable two column grid container">
+            <div class = " column">
+                <img src = "../../static/img/work/drawings/Death.png">
+            </div>
+            <div class = "column">
+                <img src = "../../static/img/work/drawings/Bronson.png">
+            </div>
+        </div>
+
+
+</div>
+
+</html>

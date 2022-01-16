@@ -82,7 +82,7 @@ img.onload = function() {
         var rect = canvas.getBoundingClientRect();
         mouseX = parseInt((e.clientX - rect.left) / scale);
         mouseY = parseInt((e.clientY - rect.top) / scale);
-        grid[mouseY][mouseX] = [255, 0, 0, 255]
+        grid[mouseY][mouseX] = [180, 0, 0, 255]
         
         // Put your mousemove stuff here
 
@@ -92,8 +92,13 @@ img.onload = function() {
         var rect = canvas.getBoundingClientRect();
         mouseX = parseInt((e.clientX - rect.left) / scale);
         mouseY = parseInt((e.clientY - rect.top) / scale);
-
-
+        for (var i = 0; i < grid.length; ++i) {
+            for(var j = 0; j < width; j++) {
+                grid[i][j] = [0, 0, 0, 0]
+                
+            }
+        }
+        
         // Put your mousemove stuff here
 
     }
@@ -197,7 +202,7 @@ img.onload = function() {
         //entrygrid[x][y] = [51, 53,52,100]
     }
     function addGrid(x, y, entrygrid, entry) {
-        entrygrid[x][y] = [entrygrid[x][y][0] + entry[0], entrygrid[x][y][1] + entry[1], entrygrid[x][y][2] + entry[2], Math.min(entrygrid[x][y][3] + entry[3], 255)]
+        entrygrid[x][y] = [entry[0], entrygrid[x][y][1] + entry[1], entrygrid[x][y][2] + entry[2], Math.min(entrygrid[x][y][3] + entry[3], 255)]
     }
     function weakenGrid() {
         //var spillarray = [[.01, .10, .01], [.10, .20, .10], [.01, .10, .01]]

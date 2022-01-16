@@ -6,7 +6,8 @@
     line-height: min(5vw, 10em);
     margin: 0px;
     width: 100%;
-    overflow:hidden;
+    text-overflow: "-";
+    overflow: hidden;
 }
 
 
@@ -51,8 +52,8 @@ a:visited{
     text-transform: uppercase;
     font-style: normal;
     font-weight:400;
-    font-size: 15pt;
-    font-weight: lighter;
+    font-size: 20pt;
+    font-weight: normal;
     text-align:left;
     margin: 5px;
 }
@@ -102,12 +103,13 @@ a:active {
     padding: 7px !important;
 }
 .projectcaption {
+    margin-top: 20%;
     font-family: poppins, sans-serif;
     font-size: 2vw;
     font-weight: light;
     color: black;
     position: relative;
-    vertical-align: middle;
+
 
     /*top: 50%;*/
   
@@ -125,7 +127,7 @@ a:active {
 
 }
 .active.item {
-    color: blue !important;
+    color: red !important;
     font-weight: 100px;
 }
 .menu {
