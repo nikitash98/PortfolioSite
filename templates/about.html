@@ -15,15 +15,7 @@
         <script src="https://unpkg.com/three@0.126.0/examples/js/controls/OrbitControls.js"></script>
 
 </head>
-<div class="ui text compact fixed top menu">
-    <a href = "../index.html" class="item" style = "visibility: visible;"> NS</a>
-    <div class = "ui right menu">
-        <a href = "/templates/work.html"  class="item">PROJECTS</a>
-        <a  href = "/templates/about.html" class="item active">ABOUT</a>
-        <a href = "/templates/contact.html" class="item">CONTACT</a>
-    </div>
 
-</div>
 
 <script type="module">
 
@@ -34,6 +26,8 @@
     //import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 
     let camera, scene, renderer, controls;
+    var mixerUpdateDelta = new THREE.Clock();        
+    let mixer;
 
     init();
 
@@ -44,9 +38,10 @@
 
         const light = new THREE.PointLight( 0xFFFFFF, 1, 100 );
         const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
+        material.flatShading = true;
 
         light.position.set( 0, 20, 10);
-        light.intensity = 3;
+        light.intensity = 2;
         const light2 = new THREE.AmbientLight( 0x404040 ); // soft white light
         light2.intensity = 0;
         scene.add( light2 );
@@ -57,7 +52,7 @@
         camera = new THREE.PerspectiveCamera( 20, $(container).width() / $(container).height(), 1, 500 );
 
         camera.position.y = 2;
-        camera.position.z = 20;
+        camera.position.z = 25  ;
 
         scene.add( camera );
 
@@ -72,15 +67,36 @@
         container.appendChild( renderer.domElement );
 
         const loader = new THREE.GLTFLoader();
-        loader.load( '../static/3d/prof.glb', function ( kmz ) {
+        loader.load( '../static/3d/facefinal.glb', function ( kmz ) {
+            kmz.scene.traverse( function ( child ) {
+                if ( child.isMesh ) {
+                    const wireframe = new THREE.WireframeGeometry( child.geometry );
+                    const line = new THREE.LineSegments( wireframe );
+                    line.material.depthTest = true;
+                    line.material.opacity = 1;
+                    line.material.transparent = true;
+                    mixer = new THREE.AnimationMixer(kmz.scene);
+	                //mixer.clipAction(kmz.animations[0]).play();
 
+                    var color = new THREE.Color( 0x000000 );
+                    line.material.color = color;
+                    line.position.y = 0.5;
+                    line.scale.set(1500, 1500, 1500);
+                    scene.add( line );
+
+                }
+            })
             kmz.scene.position.y = 0.5;
-            kmz.scene.scale.set(13, 13, 13);
+            kmz.scene.scale.set(1500, 1500, 1500);
+
+
             scene.add( kmz.scene );
+            //scene.add( line );
+
             kmz.scene.traverse((o) => {
   if (o.isMesh) o.material = material;
 });
-            render();
+            Animate();
 
         } );
 
@@ -93,11 +109,16 @@
         window.addEventListener('mousemove', mouseMove)
 
     }
+    function Animate() {
+        if(typeof mixer !== "undefined") mixer.update( mixerUpdateDelta.getDelta());
+        requestAnimationFrame(Animate);
+        render();
+  }
     function mouseMove(e) {
         let part2 = e.clientY/window.innerHeight;
         let part = e.clientX/window.innerWidth;
         camera.position.x = 20 * -part + 10;
-        camera.position.y = 10 * part2 + -2;
+        camera.position.y = 10 * part2 +0   ;
 
         controls.update()
 
@@ -122,41 +143,76 @@
     }
 
 </script>
-
-<div class="ui  two column centered grid container">
-
-    <div class = "row">
-
-    <div class="nine wide column">
-        <div id = "canvasbox" style = "height: 100%;" >
-            <canvas></canvas>
+<div class="ui text compact fixed top menu">
+    <a href = "../index.html" class="item" style = "visibility: visible;"> 
+        <img src="../static/logo/logo.svg" id = "sitelogo">
+    </a>
+    <div class = "ui right menu">
+        <a href = "/templates/work.html"  class="item">PROJECTS</a>
+        <a  href = "/templates/about.html" class="item active">ABOUT</a>
     </div>
-    </div>
-    <div class = "seven wide column">
-        <div class = "projectcaption">
-            <div class = "head">NIKITA SHTARKMAN</div>
-            My name is Nikita and I am a 3D artist, designer, and technologist. 
-            I am currently based in Baltimore and work at Under Armour as a 3D analyst.
-            You are now viewing a scan of my face.
-            
-        </div>
-        <br>
-        <div class = "projectcaption" style = "margin-top: 0px !important;">         My Personal Introduction for my SVA application is here:
-            <a href = "/templates/intro.html">LINK</a>
-        </div>
-    
-    </div>
-    </div>
-
-
-
-
-    </div>
-
 
 </div>
 
+<div class = "container aboutcontainer">
+<div class="ui stackable two equal width column centered grid container" >
+
+    <div class = "row">
+    <div class = " column">
+        <div id = "box">
+            <div class = "insidesquare">
+                <div class = "projectcaption">
+                    <div class = "head">NIKITA SHTARKMAN</div>
+                    My name is Nikita and I am a 3D artist, designer, and technologist. 
+                    I am currently based in Baltimore and work at Under Armour as a 3D Analyst.
+                    
+                    
+                </div>
+                <div class="ui  divider "></div>
+                <div class = "socials" style = "top: 100%;">
+                <div class = "projectcaption">
+                   Ways to contact me:
+                </div>
+
+                <a href = "mailto:nikitash98@gmail.com?Subject=Hello%20again">
+                <img src = "../static/icons/mail.svg" class = "abouticon">
+                </a>
+                <a href = "https://www.instagram.com/nikitas_dzn/">
+                    <img src = "../static/icons/instagram.svg" class = "abouticon">
+                </a>
+
+                <a href = "https://www.linkedin.com/in/nikita-shtarkman-78b449154/">
+                <img src = "../static/icons/linkedin.svg" class = "abouticon">
+                </a>
+            </div>
+
+            <div class="ui  divider "></div>
+
+                <div class = "projectcaption" style = "margin-top: 0px !important;top: 100%;">         My Personal Introduction for my SVA application is here:
+                    <a href = "/templates/intro.html">LINK</a>
+                </div>
+                
+            </div>
+
+    </div>
+
+    </div>
+    <div class=" column">
+        <div id="circle">  
+            <div class = "insidesquare">
+                <div id = "canvasbox" style = "height: 100%; width: 100%;" >
+                    
+             </div>
+            </div>
+
+         
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
 
 
+</div>
 </div>
 </html>

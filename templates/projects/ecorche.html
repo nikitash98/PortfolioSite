@@ -9,18 +9,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
         <script src  = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.js"></script>
     </head>
-    <div class="ui text compact fixed top menu" >
+    <div class="ui text fixed top menu">
 
-        <a href = "../../index.html" class = "item" style = "visibility: visible;">NS</a>
+        <a href = "../../index.html" class = "item" style = "visibility: visible;">
+            <img src="/static/logo/logo.svg" id = "sitelogo">
+        </a>
     
         <div class = "ui right menu" style="background-color: transparent !important;">
     
             <a href = "../work.html"  class="active item" >PROJECTS</a>
-    
             <a  href = "../about.html" class="item">ABOUT</a>
-            <a href = "../contact.html" class="item">CONTACT</a>
         
         </div>
+    
     </div>
     <script type="module">
 
@@ -35,18 +36,21 @@
 
     </script>
 
-
+    <div class = "container containerleft">
     <div id = "images" class = "gallery">
 
-        <div class="ui stackable centered two column grid container">
+        <div class="ui stackable centered equal height two column grid container">
             <div class="column">
                 <img src = "../../static/img/work/ecorche/ecorche.png">
             </div>
             <div class = "column">
                 <div class = "projectcaption">
                     <div class = "head">ANATOMY OF A GUY</div>
-
-                    A sculpted ecorche study, to practice anatomy knowledge. Designed a poster for the hell of it.
+                    A (meant to be funny) poster of one of my anatomy studies. I wanted to inject some humor into a usually dreary subject.
+                    <br>
+                    <br>
+                    I sculpted the ecorche in Zbrush as a full study of the human figure. I then posed and rendered it. 
+                    Finally, I brought it into Illustrator and designed the poster around it.
                     <br>
                     <br>
                     Tools used: Illustrator, Zbrush, Arnold, Maya
@@ -67,10 +71,24 @@
         </div>
 
         <div class="ui stackable centered  two column grid container">
-            <div class="ten wide column">
+            <div class = "four wide column">
+                <video width="100%"  autoplay loop muted controls>
+                    <source src="../../static/img/work/ecorche/one.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>   
+            </div>
+            <div class="six wide column">
                 <img src = "../../static/img/work/ecorche/anatomy1finsih.png">
+            </div>
+            <div class = "four wide column">
+                <video width="100%"  autoplay loop muted controls>
+                    <source src="../../static/img/work/ecorche/two.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>   
             </div>
 
         </div>
+    </div>
+
 </div>
 </html>

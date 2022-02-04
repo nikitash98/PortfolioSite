@@ -1,13 +1,14 @@
 .head {
     font-family: poppins, sans-serif;
     font-style: normal;
-    font-size: min(5vw, 10em);
-    font-weight: 900;
-    line-height: min(5vw, 10em);
+    font-size: min(3vw, 4em);
+    font-weight: 800;
+    line-height: min(3vw, 4em);
     margin: 0px;
     width: 100%;
+    color: black;
     text-overflow: "-";
-    overflow: hidden;
+  
 }
 
 
@@ -18,6 +19,7 @@
     -webkit-text-stroke-color: black;
     */
   }
+
 
 canvas{
     position: absolute;
@@ -35,15 +37,16 @@ a:visited{
 }
 .main {
     z-index: 2;
-    position: absolute;
+    position: relative;
+    top:400px;
     margin: 0px;
     visibility: visible;
 }
 
 .projectitem{
-    position: sticky;
     top: 0px;
     stroke-width: 3px;
+    padding: 2%;
 }
 
 .caption {
@@ -52,20 +55,18 @@ a:visited{
     text-transform: uppercase;
     font-style: normal;
     font-weight:400;
-    font-size: 20pt;
+    font-size: max(1vw, 1em);
     font-weight: normal;
     text-align:left;
-    margin: 5px;
+    margin-top: 5px;
 }
-.caption:hover {
-    color:red;
-}
+
 
 a:hover {
     color: red;
 }
 a:active {
-    color: blue;
+    color: yellow;
 }
 .captiontest {
     font-family: 'Times New Roman', Times, serif;
@@ -78,6 +79,34 @@ a:active {
 
 }
 .projectitem img:hover {
+
+}
+.imgoverlay {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;   
+    opacity: 0;
+    transition: .2s ease;
+
+    top: 0%;
+    left: 0%;
+}
+
+.imagecontainer {
+    position: relative;
+}
+.projectitem:hover .imgoverlay {
+    opacity: .3;
+  }
+.imagecontainer:hover img {
+    filter:  grayscale(100%);
+    transition: .2s;
+
+}
+.imagecontainer:hover video {
+    filter:  grayscale(100%);
+    transition: .2s;
 
 }
 
@@ -102,14 +131,16 @@ a:active {
 .column {
     padding: 7px !important;
 }
+body {
+    background-color: white !important;
+}
 .projectcaption {
-    margin-top: 20%;
     font-family: poppins, sans-serif;
-    font-size: 2vw;
+    font-size: max(1.2vw, .8em);
     font-weight: light;
     color: black;
-    position: relative;
-
+    position: sticky;
+    top: 100px;
 
     /*top: 50%;*/
   
@@ -119,20 +150,18 @@ a:active {
 }
 .item{
     font-family: poppins, sans-serif;
-    font-size: max(15px,1vw) !important;
+    font-size: max(15px,2vw) !important;
     padding: 20px !important;
     margin: 0px !important;
-    font-weight: 800;
-    background-color: rgba(255, 255, 255, 1) !important;
+    font-weight: 400;
+    /* background-color: rgba(255, 255, 255, 1) !important; */
 
 }
-.active.item {
-    color: red !important;
-    font-weight: 100px;
-}
+
 .menu {
     background-color: transparent !important;
     box-shadow: none !important;
+
 }
 
 .sidemenu {
@@ -147,4 +176,95 @@ a:active {
     background-color: white;
 }
 .containerleft{
+    margin-left: 2%;
+    margin-right: 2%;
+    top: 100px !important;
+    position: relative;
 }
+.ui.menu {
+    background-color: white !important;
+    padding-left: 2%; 
+    padding-right: 2%;
+}
+
+#circle {
+	width: 100%;
+    padding-bottom: 100%;
+    stroke: red;
+    outline: 2px solid black;
+    border-radius: 100%;
+
+    /*
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;*/
+    overflow: hidden;
+    position: relative;
+}
+
+#box {
+    width: 100%;
+    padding-bottom: 100%;
+    
+    outline: 2px solid black;
+    position: relative;
+    
+}
+
+.insidesquare {
+    padding: 5%;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#sitelogo{
+    height: max(15px, 2vw)
+}
+
+.reelouter {
+    padding: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.reelwrapper {
+    position: relative;
+padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+
+
+
+}
+@media only screen and (max-width: 992px) {
+    .reelouter {
+        padding: 0%;
+    }
+}
+.reelwrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+.aboutcontainer {
+    height: calc(100% - 100px);
+    padding: 10%;
+}
+.abouticon {
+    width: max(3vw, 40px);
+    padding: 5px;
+}
+
+#canvasbox {
+}
+
+#canvasbox canvas {
+    position: absolute; 
+    top: 0; left: 0; bottom: 0; right: 0;
+
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: auto;
+    }

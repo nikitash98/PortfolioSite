@@ -9,18 +9,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
         <script src  = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.js"></script>
     </head>
-    <div class="ui text compact fixed top menu" >
+    <div class="ui text fixed top menu">
 
-        <a href = "../../index.html" class = "item" style = "visibility: visible;">NS</a>
+        <a href = "../../index.html" class = "item" style = "visibility: visible;">
+            <img src="/static/logo/logo.svg" id = "sitelogo">
+        </a>
     
         <div class = "ui right menu" style="background-color: transparent !important;">
     
             <a href = "../work.html"  class="active item" >PROJECTS</a>
-    
             <a  href = "../about.html" class="item">ABOUT</a>
-            <a href = "../contact.html" class="item">CONTACT</a>
         
         </div>
+    
     </div>
     <script type="module">
 
@@ -35,9 +36,10 @@
 
     </script>
 
+    <div class = "container containerleft">
 
     <div id = "images" class = "gallery">
-        <div class="ui stackable centered  three column grid container">
+        <div class="ui stackable centered  three column grid container equal height">
             <div class="three column centered row">
                 <div class="column">
                     <img src = "../../static/img/work/kulipari_posters/Darel_Final.png">
@@ -49,8 +51,14 @@
                     <div class = "projectcaption">
                         <div class = "head">KULIPARI POSTERS</div>
 
-                        Posed the characters, rendered them, and then designed posters at OVFX for distribution at
-                        Comic Con and Kidscreen. 
+                        A pair of posters designed at OVFX for distribution and large scale printing at Kidscreen and Comic Con. 
+                        <br>
+                        <br>
+                        I posed, lit, and rendered the characters. Then I used photobashing and stock images to fill out the images. 
+                        This saved the team time from having to model and render setting and accessories, while also allowing more on-the-fly changes to the composition.
+                        <br>
+                        <br>
+                        Tools used: Maya, Arnold, Photoshop, Illustrator 
                     </div>
                 </div>
     
@@ -60,20 +68,22 @@
             Process
           </div>
 
-        <div class="ui stackable centered  four column grid container">
-            <div class="column">
+        <div class="ui stackable centered  one column grid container">
+            <div class = "row">
+
+            <div class="six wide column">
                 <img src = "../../static/img/work/kulipari_posters/Darel_Process.gif">
-            </div>
-            <div class="column">
-                <div class = "projectcaption">DAREL POSTER PROCESS</div>
-            </div>
-            <div class="column">
+            </div>            </div>
+
+            <div class = "row">
+
+            <div class="six wide column">
                 <img src = "../../static/img/work/kulipari_posters/Marmoo_Process.gif">
             </div>
-            <div class="column">
-                <div class = "projectcaption">MARMOO POSTER PROCESS</div>
+        </div>
+
             </div>
-            </div>
+        </div>
 
 </div>
 </html>
