@@ -1,0 +1,153 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.typekit.net/jja2din.css">
+        <link rel= "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.css">
+        <link rel= "stylesheet" type= "text/css" href= "../../static/simple.css">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+        <script src  = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.js"></script>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+
+    </head>
+    <script type="module">
+
+    // View an image.
+
+    // Then, show the image by clicking it, or call `viewer.show()`.
+    
+    // View a list of images.
+    // Note: All images within the container will be found by calling `element.querySelectorAll('img')`.
+    const gallery = new Viewer(document.getElementById('images'), {toolbar: 0});
+    // Then, show one image by click it, or call `gallery.show()`.
+
+    </script>
+
+<!--
+
+<div class="ui text fixed top menu">
+
+    <a href = "../../index.html" class = "item" style = "visibility: visible;">
+        <img src="/static/logo/logo.svg" id = "sitelogo">
+    </a>
+
+    <div class = "ui right menu" style="background-color: transparent !important;">
+
+        <a  href = "../about.html" class="item">about</a>
+    
+    </div>
+
+</div>
+-->
+<a href = "../about.html">
+    
+<img id="info" src ="../../static/icons/info.svg" >
+</a>
+
+
+<a href = "../../index.html">
+<img id="logo" src = "../../static/logo/white-logo.svg" >
+</a>
+
+<div class = "project-cover">
+    <video src = "../../static/img/work/nerf/nerf.mp4" autoplay controls muted loop width="100%" > </video>
+
+</div>
+<p class="caption">
+    Unmute this video to listen to the audio effect.
+    <br>
+    The Touchdesigner process - loaded with NERF videos and 3D scene information - Touchdesigner is able to transition
+    between two videos. 
+</p>
+<div class = "container containerleft">
+
+    <div id = "images" class = "gallery">
+        <div class = "separator">
+
+        </div>
+        <video src = "../../static/img/work/nerf/adam_born_trimmed_1.mp4" autoplay muted loop width="100%" > </video>
+
+        <p class="caption">
+            Adam being born. The nerf process slowly decides on a representation of the first man. 
+        </p>
+        <div class = "separator">
+
+        </div>
+        <h1>Quantum Jam: Nerf Exploration </h1>
+
+        <div class="ui stackable grid container">
+            
+            <div class = "eight wide column">
+                <p>
+                    My contribution on a team for the IBM + Touchdesigner Quantum Design Jam challenge.
+                    I used the NERF process, and set up NVIDIA's codebase to generate ephemeral, painterly
+                    scenes. The concept was to use quantum information to allow the computer to decide whether 
+                    to display. I used both rendered video from within the NERF application, and the NERF 3D information
+                    to create a novel way to transition between scenes.
+                </p>
+            </div>
+            <div class = "eight wide column">
+                <p class = "other-text">
+                    Using NVIDIA NERF and quantum computing to generate computer dreams.<br>
+                    <br>
+                    Blending 3D and Video
+                
+                     
+                </p>
+            </div>
+        </div>
+        <div style="text-align: left">
+                <div class="ui stackable grid container">
+            <div class = "eight wide column">
+            </div>
+
+        <div class = "separator">
+
+        </div>
+        
+        <div style="text-align: center;">
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/K9BKknUSlSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="caption">
+                A video of our presentation. My section starts at 3:30.
+            </p>
+        </div>
+        
+        <div class = "ui horizontal divider header">Captured Videos</div> 
+
+        <p>
+            These are some of the captured NERF videos. I purposefully took less images than the process
+            recommended. The effect of a lack of information is a beautiful, digital fog. Like a vague daydream.
+        </p>
+        <div class = "vid-gallery" style="text-align: center" >
+            <video src = "../../static/img/work/nerf/Eve_Low.mp4" autoplay muted loop  > </video>
+            <video src = "../../static/img/work/nerf/Flower_Low.mp4" autoplay muted loop   > </video>
+            <video src = "../../static/img/work/nerf/Plant_Low.mp4" autoplay muted loop  > </video>
+            <video src = "../../static/img/work/nerf/Half_Low.mp4" autoplay muted loop> </video>
+        </div>
+        <!--
+
+        <div class="ui stackable grid container">
+            <div class = "eight wide column">
+            </div>
+            <div class = "eight wide column">
+                <video src = "../../static/img/work/nerf/Flower_Low.mp4" autoplay muted loop width="100%"  > </video>
+            </div>
+            <div class = "eight wide column">
+                <video src = "../../static/img/work/nerf/Plant_Low.mp4" autoplay muted loop width="100%" > </video>
+
+            </div>
+            <div class = "eight wide column">
+                <video src = "../../static/img/work/nerf/Half_Low.mp4" autoplay muted loop width="100%"  > </video>
+            </div>
+        </div>
+        -->
+
+    </div>
+
+</div>
+
+</div>
+
+</html>

@@ -1,80 +1,184 @@
 <html>
-    <link rel="stylesheet" href="//use.typekit.net/jja2din.css">
-    <script type = "text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/pts/0.10.6/pts.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <head>
+        <link rel="stylesheet" href="https://use.typekit.net/jja2din.css">
 
-    <link rel="stylesheet" href="https://use.typekit.net/jja2din.css">
+        <link rel= "stylesheet" type= "text/css" href= "../static/simple.css">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+        <link rel="icon" href="../static/logo/logo.svg">
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
 
-    <link rel= "stylesheet" type= "text/css" href= "../static/simple.css">
-    <link rel= "stylesheet" type= "text/css" href= "../static/index.css">
-
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
-    <link rel="icon" href="../static/logo/logo.svg">
-    <script type = "text/javascript" src="js/home.js"></script>
+    </head>
+  
 
 
 
-    <body>
-        <div class="ui text fixed top menu" style = "padding-left: 2%; padding-right: 2%;">
 
-            <a href = "/index.html" class = "item" style = "visibility: visible;">
-                <img src="../static/logo/logo.svg" id = "sitelogo">
+<div class = "container  containerleft">
+<a href = "/templates/about.html">
+    
+<img id="info" src = "static/icons/info.svg">
+</a>
+
+    <img id="logo" src = "static/logo/logo.svg">
+
+    <div class = "homepage" style="text-align: center;" >
+        <div class = "homepagetext">
+
+        <!--
+
+        <div class = "homepageview">
+                
+            <a href = "templates/work.html" class="ui custombutton button">
+                See my work
             </a>
-        
-            <div class = "ui right menu" style="background-color: transparent !important;">
-        
-                <a href = "templates/work.html"  class=" item" >PROJECTS</a>
-                <a  href = "templates/about.html" class="item">ABOUT</a>
-            
-            </div>
-        
+              
+        </div>
+            -->
+
         </div>
 
-        <div class = "container  containerleft">
-            <div class = "homepage" >
-                <div class = "homepagetext">
 
-                <div class = "homepagesplash">
-                   NIKITA SHTARKMAN
+        <video width="70%" height="100%" autoplay loop muted style=" " >
+            <source src="/static/logo/Ident.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>   
+</div>
+<div class = "bottom-arrow">
+    <img src = "../static/icons/iconmonstr-arrow-down-lined.svg"/>
+  </div>
+<div class = " container containerleft">
+
+
+    <div class = "ui horizontal divider header">Projects</div> 
+
+
+
+
+
+    
+    <div class="ui stackable grid container">
+        <div class = "sixteen wide column">
+            <a href= "templates/projects/mapoftheuniverse.html">
+                <div class = "projectitem">
+                    <div class = "imagecontainer">
+                        <img src = "../static/img/work/mapofuniverse/MapoftheUniverseThumbnail.png">
+                    <div class = "imgoverlay"></div>
                 </div>
-                <div class = "homepageview">
-                    
-                    <a href = "templates/work.html" class="ui custombutton button">
-                        See my work
+                    <div class = "caption">Map of the Universe </div>
+                </div>
+                </a>
+        </div>
+
+        <div class = "sixteen wide column">
+            <a href="../templates/projects/quantum.html">
+                <div class = "projectitem">
+                    <div class = "imagecontainer">
+                        <video src = "../static/img/work/thumbnails/nerf.mp4" autoplay muted loop width="100%" > </video>
+
+                    <div class = "imgoverlay"></div>
+
+                </div>
+                    <div class = "caption">Quantum Jam: Nerf Exploration </div>
+                </div>
+                </a>
+        </div>
+
+        <div class="stackable three column row">
+            <div class="column ">
+                <a href="../templates/projects/skeleton.html">
+
+                    <div class = "projectitem">
+                            <div class = "imagecontainer">
+                                <video src = "../static/img/work/thumbnails/moving/revolve.mp4" autoplay muted loop width="100%" > </video>
+                                <div class = "imgoverlay"></div>
+
+                            </div>
+                            <div class = "caption">Revolve | Consist </div>
+                        <br>
+                    </div>
+                </a>
+            </div>
+            <div class = " column">
+                <a href="../templates/projects/sneaker.html">
+
+                <div class = "projectitem">
+                    <div class = "imagecontainer">
+                        <img src = "../static/img/work/thumbnails/moving/sneaks2.gif">
+                        <div class = "imgoverlay">
+                        </div>
+
+                    </div>
+                    <div class = "caption">Louis Vuitton X Kanye Jaspers</div>
+
+                </div>
+                </a>
+            </div>
+            <div class = " column">
+                <a href="../templates/projects/nft.html">
+                    <div class = "projectitem">
+                        <div class = "imagecontainer">
+
+                            <video src = "../static/img/work/thumbnails/moving/boxy.mp4" autoplay muted loop width="100%" > </video>
+                            <div class = "imgoverlay">
+                        </div>
+                        </div>
+                        <div class = "caption">New Fragmentary Things</div>
+
+                    </div>
                     </a>
-                      
+            </div>
+            <div class="column">
+                <a href="../templates/projects/bear.html">
+                <div class = "projectitem">
+                    <div class = "imagecontainer">
+
+                    <img src = "../static/img/work/thumbnails/bear.jpg"></img>
+                    <div class = "imgoverlay">
+                    </div>
+
+                    </div>
+                    <div class = "caption">Mr. Pop - Polycount Challenge</div>
                 </div>
-                </div>
+                </a>
+            </div>
+        
+            <div class = " column">
+                <a href="../templates/projects/dragon.html">
+                    
+                    <div class = "projectitem">
+                        <div class = "imagecontainer">
+                        <img src = "../static/img/work/thumbnails/gun.jpg">
+                        <div class = "imgoverlay">
+                        </div>
+                    </div>
+                    <div class = "caption">Dragon Ash </div>
+
+                    </div>
+                    </a>
+            </div>
+            <div class = " column">
+                <a href="../templates/projects/nike.html">
+                    <div class = "projectitem">
+                        <div class = "imagecontainer">
+
+                        <video src = "../static/img/work/nike/Shoes3_1.MP4" autoplay muted loop width="100%" > </video>
+                        <div class = "imgoverlay"></div>
+                        </div>
+                        <div class = "caption">Nike Off-White Blazers </div>
+                    </div>
+                    </a>
+            </div>
+        </div>
 
 
-                <video width="100%" height="90%" autoplay loop muted style="object-fit: cover; " >
-                    <source src="/static/logo/final2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                  </video>   
+          
+          
 
 
 </div>
-</div>
-
-
-</body>
-
-
-
-    <style>
-        #myCanvas{
-            width: 100%;
-            height: 100%;
-            image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-
-        }
-    </style>
-
+ 
 
 </html>

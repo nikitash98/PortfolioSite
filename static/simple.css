@@ -2,7 +2,7 @@
     font-family: poppins, sans-serif;
     font-style: normal;
     font-size: min(3vw, 4em);
-    font-weight: 800;
+    font-weight: 400;
     line-height: min(3vw, 4em);
     margin: 0px;
     width: 100%;
@@ -10,8 +10,83 @@
     text-overflow: "-";
   
 }
+p {
+    font-size: 15pt;
+    text-align: justify;
+}
 
+h1 {
+    font-size: 40pt !important;
+    font-weight: 700 !important;
+    font-family: "Helvetica Neue" !important;
+}
 
+#info{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 50px;
+    z-index: 5;
+    cursor: pointer;
+    padding: 10px;
+    background-color: white;
+
+}
+
+#logo {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 90px;
+    height: 90px;
+    z-index: 5;
+    cursor: pointer;
+    padding: 10px;
+    /*background-color: white;*/
+
+}
+
+.project-cover {
+    width: 100%;
+    height: 100vh;
+}
+
+.project-cover img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-cover video {
+        height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+
+}
+.separator {
+    margin-top: 100px;
+}
+.img-gallery img {
+    max-height: 80vh;
+    max-width: 100%;
+    width: auto;
+    margin: auto;
+}
+.img-gallery {
+    text-align: center;
+}
+.bottom-arrow {
+    position: absolute;
+    text-align: center;
+    top:85vh;
+    left: 50%;
+    transform: translate(-50%,0%);
+    cursor: pointer;
+}
+.bottom-arrow img{
+    width: 40px;
+}
 .head:hover{
     /*
     color: white;
@@ -52,7 +127,6 @@ a:visited{
 .caption {
     font-family: 'Times New Roman', Times, serif;
     font-family: poppins, sans-serif;
-    text-transform: uppercase;
     font-style: normal;
     font-weight:400;
     font-size: max(1vw, 1em);
@@ -61,7 +135,13 @@ a:visited{
     margin-top: 5px;
 }
 
-
+.big-image-gallery {
+    text-align: center;
+}
+.big-image-gallery img{
+    width: 80%;
+    padding: 20px;
+}
 a:hover {
     color: red;
 }
@@ -78,6 +158,17 @@ a:active {
     width:100%;
 
 }
+
+.other-text{
+    color: red;
+    font-size: 30pt;
+    padding: 20px;
+}
+
+.caption {
+    font-size: 10pt;
+    color: grey;
+}
 .projectitem img:hover {
 
 }
@@ -92,6 +183,7 @@ a:active {
     top: 0%;
     left: 0%;
 }
+
 
 .imagecontainer {
     position: relative;
@@ -124,8 +216,9 @@ a:active {
     width: 100%;
 }
 
-.gallery img {
-    width :100%;
+img {
+    width: 100%;
+    
 }
 
 .column {
@@ -145,17 +238,29 @@ body {
     /*top: 50%;*/
   
 }
+.vid-gallery video {
+    padding:5%; 
+    width: 90%;
+}
+.vid-gallery{
+    text-align: center;
+
+}
+.ui.grid {
+    margin: 0px !important;
+}
 .ui.menu .item:before{
     visibility: hidden !important;
 }
 .item{
     font-family: poppins, sans-serif;
-    font-size: max(15px,2vw) !important;
     padding: 20px !important;
     margin: 0px !important;
     font-weight: 400;
     /* background-color: rgba(255, 255, 255, 1) !important; */
-
+}
+.ui.text.menu .active.item {
+    font-weight: 400 !important;
 }
 
 .menu {
@@ -178,7 +283,6 @@ body {
 .containerleft{
     margin-left: 2%;
     margin-right: 2%;
-    top: 100px !important;
     position: relative;
 }
 .ui.menu {

@@ -8,6 +8,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
         <script src  = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.js"></script>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+
     </head>
     <script type="module">
 
@@ -21,6 +23,8 @@
     // Then, show one image by click it, or call `gallery.show()`.
 
     </script>
+    <!--
+
 <div class="ui text fixed top menu">
 
     <a href = "../../index.html" class = "item" style = "visibility: visible;">
@@ -29,32 +33,40 @@
 
     <div class = "ui right menu" style="background-color: transparent !important;">
 
-        <a href = "../work.html"  class="active item" >PROJECTS</a>
-        <a  href = "../about.html" class="item">ABOUT</a>
+        <a  href = "../about.html" class="item">about</a>
     
     </div>
 
 </div>
+    -->
+
+    <a href = "../about.html">
+        <img id="info" src ="../../static/icons/info.svg" >
+    </a>
+    
+    <a href = "../../index.html">
+        <img id="logo" src = "../../static/logo/white-logo.svg" >
+    </a>
+<div class = "project-cover">
+    <video width="100%"  autoplay loop muted controls style="object-position: 50% 40%;";>
+        <source src="../../static/img/work/nft/fixedsim.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>   
+</div>
     <div class = "container containerleft">
-    <div id = "images" class = "gallery">
-        <div class="ui stackable equal width two column grid container" style= "background-color: black;">
-            <div class = "column">
-                <img src = "../../static/img/work/nft/boxy3.png">
-            </div>
-        </div>
-        <div class="ui stackable equal height two column grid container">
+ 
+
+        <div class = "cover" style="text-align: center; background-color: black">
             
-            <div class = "ten wide column">
-                <video width="100%" autoplay loop muted controls>
-                    <source src="../../static/img/work/nft/fixedsim.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                  </video>   
+        </div>
+        <div class = "ten wide column">
+        </div>
+        <h1>The New Fragments - An Exploration</h1>
 
-            </div>
-            <div class = "three wide column " >
-
-                <div class = "projectcaption"> 
-                    <div class = "head">NEW FRAGMENTARY THINGS</div>
+    <div id = "images" class = "gallery">
+        <div class="ui stackable grid container">
+            <div class = "eight wide column">
+                <p>
                     What does it mean to own a piece of art? What are the consequences of digitizing art?
                     <br>
                     I developed a 3D pixelization process in Houdini using 3D noises and volume calculations. This is a process that allows for gradation in the pixelization, creating a unique animated effect.
@@ -65,39 +77,72 @@
                     Tools used: Houdini, Maya, Arnold, Substance Painter, Photoshop
                     <br>
                     <br>
-                 </div>
+                </p>
+            </div>
+            <div class = "eight wide column">
+                <p class = "other-text">
+                    Inquiry using Houdini. <br>
+                    Generative Art and sampling from the greats.
+                </p>
             </div>
         </div>
-        <div class="ui stackable equal width two column grid container" >
-            <div class = "column">
-    
-                <img src = "../../static/img/work/nft/houd.png">
+        <!--
+
+        <div class="ui stackable equal height two column grid container">
+            
+            <div class = "three wide column " >
+
+                <div class = "projectcaption"> 
+                    What does it mean to own a piece of art? What are the consequences of digitizing art?
+                    <br>
+                    I developed a 3D pixelization process in Houdini using 3D noises and volume calculations. This is a process that allows for gradation in the pixelization, creating a unique animated effect.
+                    I ran that on a variety of recognizable sculptures, and then paired them with philosophical fragments from Friedrich Schlegel's Philosophical Fragments.
+                    This was designed into a deck of cards and printable posters.
+                    <br>
+                    <br>
+                    Tools used: Houdini, Maya, Arnold, Substance Painter, Photoshop
+                    <br>
+                    <br>
+                </div>
             </div>
+        </div>
+        -->
+
+        <div class="ui stackable equal width two column grid container" style= "background-color: black;">
             <div class = "column">
-                <img src = "../../static/img/work/nft/houd2.png">
+                <img src = "../../static/img/work/nft/boxy3_other.png">
             </div>
+        </div>
+        <div class="ui stackable equal width two column grid container">
             <div class = "column">
-    
                 <img src = "../../static/img/work/nft/passes.png">
             </div>
         </div>
+        
     <div class="ui stackable equal width two column grid container" >
         
-        <div class = "column">
-            <div class = "head" style = "color:white;"> THE CARDS</div>
-
-            <img src = "../../static/img/work/nft/cards.png">
+        <div class = "column" style="text-align: center;">
+            <img src = "../../static/img/work/nft/cards.png" style="width: 40%">
         </div>
     </div>
     <div class="ui stackable equal width two column grid container">
         <div class = "column">
             <img src = "../../static/img/work/nft/cards2.png">
         </div>
-    </div>
-    <div class="ui stackable equal width two column grid container">
         <div class = "column">
             <img src = "../../static/img/work/nft/posters.png">
         </div>
+    </div>
+    <div class="ui stackable equal width two column grid container" >
+        <div class = "column">
+
+            <img src = "../../static/img/work/nft/houd.png">
+        </div>
+        <div class = "column">
+            <img src = "../../static/img/work/nft/houd2.png">
+        </div>
+    </div>
+    <div class="ui stackable equal width two column grid container">
     </div>
 </div>
 

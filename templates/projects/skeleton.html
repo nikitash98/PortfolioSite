@@ -8,7 +8,24 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
         <script src  = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.js"></script>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+
     </head>
+
+    <style>
+        body {
+            background-color: black !important;
+        }
+        p {
+            color: white;
+        }
+        h1 {
+            color: white;
+        }
+        .ui.horizontal.divider {
+            color: white !important;
+        }
+    </style>
     <script type="module">
 
     // View an image.
@@ -21,6 +38,7 @@
     // Then, show one image by click it, or call `gallery.show()`.
 
     </script>
+<!--
 
 <div class="ui text fixed top menu">
 
@@ -34,30 +52,59 @@
         <a  href = "../about.html" class="item">ABOUT</a>
     
     </div>
-
 </div>
+-->
+
+
+    
+<img id="info" src = "../../static/icons/info.svg">
+<img id="logo" src = "../../static/logo/logo.svg">
+
+<body>
+
+<div class = "project-cover">
+    <video width="100%"  autoplay loop muted controls style="object-position: 50% 20%;">
+        <source src="../../static/img/work/skeletons/Revolve.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>   </div>
 <div class = "container containerleft">
+    <!--
+
+    <h1>Revolve | Consist</h1>
+    <br>
+    -->
 
     <div id = "images" class = "gallery">
 
     <div class="ui stackable centered  three column grid container" style = "background-color: black;">
         <div class="three column centered row">
             <div class="column">
+                <div>
+
                 <video width="100%"  autoplay loop muted controls>
                     <source src="../../static/img/work/skeletons/Revolve.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video>   
-                  
+                  <p class = "caption">
+                    Revolve: Unmute for sound.
+                  </p>
+                </div>
 
             </div>
             <div class="column">
+                <div>
+
                 <video width="100%"  autoplay loop muted controls>
                     <source src="../../static/img/work/skeletons/Consist.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video>  
-
-                  
+                  <p class  = "caption">
+                    Consist: Unmute for sound.
+                  </p>
+                </div>
             </div>
+        </div>
+        <div class = "separator">
         </div>
       
 
@@ -77,6 +124,38 @@
         -->
 
     </div>
+    <h1>
+        REVOLVE | CONSIST
+    </h1>
+    <div class="ui stackable equal height three column grid container" style = "background-color: black;">
+        <div class = "column">
+        </div>
+        <div class = "column">
+            <p>
+                <br>
+                A skeleton sculpted in Zbrush as a study of human anatomy. This skeleton was then ripped apart, blown up, pulled and distroted in an abstract video series. The immersive sound in the videos is courtesy of Anton Shtarkman.
+                <br>
+                <br>
+                The skeleton was sculpted using a variety of reference material to be an anatomically accurate reproduction. 
+                <br>
+                <br>
+                Tools used: Zbrush, Maya, Arnold, Houdini, After Effects, Illustrator
+            </p>
+        </div>
+        
+    </div>
+
+    <div class = "column" >
+        
+       
+        
+    </div>
+
+    <div class = "separator">
+    </div>
+    <div class = "ui horizontal divider header">The Sculpt</div> 
+
+
     <div class="ui stackable equal height three column grid container" style = "background-color: black;">
         <div class = "column">
             <img src = "../../static/img/work/skeletons/skele1.png"/>
@@ -88,55 +167,66 @@
             <div class = "column">
                 <img src = "../../static/img/work/skeletons/skele2.png"/>
                 </div>
+                <p>
+                    Everything for this skeleton was sculpted from scratch. All bones started as spheres. This was a study in creating the human figure
+                    from reference - with no base. A lot of credit is due to Andrew Loomis.
+                </p>
     </div>
-    <div class="ui stackable equal width two column grid container" style = "background-color: black;">
-        <div class = "column">
-            <video width="100%" height="100%" autoplay loop muted controls>
-                <source src="../../static/img/work/skeletons/break.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>  
 
-        </div>
-        <div class = "column">
-            <video width="100%" height="100%" autoplay loop muted controls>
-                <source src="../../static/img/work/skeletons/spin.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>  
-        </div>
+
+    <div class="ui stackable equal width three column grid container" style = "background-color: black;">
         <div class = "column">
             <img src = "../../static/img/work/skeletons/closeskele.png"/>
-            </div>
-        <div class = "column" >
-            <div class = "projectcaption" style ="color:white">
-                <div class = "head" style ="color:white"    >REVOLVE | CONSIST</div>
-                <br>
-                A skeleton sculpted in Zbrush as a study of human anatomy. This skeleton was then ripped apart, blown up, pulled and distroted in an abstract video series. The immersive sound in the videos is courtesy of Anton Shtarkman.
-                <br>
-                <br>
-                The skeleton was sculpted using a variety of reference material to be an anatomically accurate reproduction. 
-                
-                
-                <br>
-                <br>
-                Tools used: Zbrush, Maya, Arnold, Houdini, After Effects, Illustrator
-
-            </div> 
-
-            </div>
-
-    </div>
-
-
-    <div class="ui stackable equal width two column grid container" style = "background-color: black;">
+        </div>
         <div class = "column">
             <img src = "../../static/img/work/skeletons/finalfeet.png"/>
             </div>
         <div class = "column">
             <img src = "../../static/img/work/skeletons/finalhand.png"/>
             </div>
-
     </div>
+    <div class = "ui horizontal divider header">The Simulation</div> 
+
+    <!--
+
+    <div class="ui stackable equal width two column grid container" style = "background-color: black;">
+        <div class = "column">
+
+        </div>
+        
+        <div class = "column">
+        </div>
+
+        <div class = "column">
+            <img src = "../../static/img/work/skeletons/closeskele.png"/>
+        </div>
+    </div>
+    -->
+    <p>
+        Houdini was used to deform and displace the skeletal body. Bones were simulated both as hard-bodies, and as inflatables.
+        Much work was put in to troubleshoot the interactions between bones, and the timings of the simulations.
+      </p>
+    <div class = "vid-gallery">
+        <video width="100%"autoplay loop muted controls>
+            <source src="../../static/img/work/skeletons/break.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          
+          </video>  
+          <p class = "caption">
+            The explosion
+          </p>
+          <video width="100%" autoplay loop muted controls>
+            <source src="../../static/img/work/skeletons/spin.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>  
+    </div>
+    
 </div>
+
+
 </div>
+<div class = "separator">
+
+</body>
 
 </html>
