@@ -12,33 +12,9 @@
 
     </head>
     <script type="module">
-
-    // View an image.
-
-    // Then, show the image by clicking it, or call `viewer.show()`.
-    
-    // View a list of images.
-    // Note: All images within the container will be found by calling `element.querySelectorAll('img')`.
-    const gallery = new Viewer(document.getElementById('images'), {toolbar: 0});
-    // Then, show one image by click it, or call `gallery.show()`.
-
+        const gallery = new Viewer(document.getElementById('images'), {toolbar: 0});
     </script>
-    <!--
 
-<div class="ui text fixed top menu">
-
-    <a href = "../../index.html" class = "item" style = "visibility: visible;">
-        <img src="/static/logo/logo.svg" id = "sitelogo">
-    </a>
-
-    <div class = "ui right menu" style="background-color: transparent !important;">
-
-        <a  href = "../about.html" class="item">about</a>
-    
-    </div>
-
-</div>
-    -->
 
     <a href = "../about.html">
         <img id="info" src ="../../static/icons/info.svg" >
@@ -48,65 +24,42 @@
         <img id="logo" src = "../../static/logo/white-logo.svg" >
     </a>
 <div class = "project-cover">
-    <video width="100%"  autoplay loop muted controls style="object-position: 50% 40%;";>
+    <video width="100%"  autoplay loop muted style="object-position: 50% 40%;";>
         <source src="../../static/img/work/nft/fixedsim.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>   
-</div>
-    <div class = "container containerleft">
- 
+    <div style="position: absolute; color: white; text-align: center; bottom: 0;">
+        <div class = "containerleft">
 
-        <div class = "cover" style="text-align: center; background-color: black">
-            
-        </div>
-        <div class = "ten wide column">
-        </div>
-        <h1>The New Fragments - An Exploration</h1>
-
-    <div id = "images" class = "gallery">
         <div class="ui stackable grid container">
-            <div class = "eight wide column">
-                <p>
-                    What does it mean to own a piece of art? What are the consequences of digitizing art?
-                    <br>
-                    I developed a 3D pixelization process in Houdini using 3D noises and volume calculations. This is a process that allows for gradation in the pixelization, creating a unique animated effect.
-                    I ran that on a variety of recognizable sculptures, and then paired them with philosophical fragments from Friedrich Schlegel's Philosophical Fragments.
-                    This was designed into a deck of cards and printable posters.
-                    <br>
-                    <br>
-                    Tools used: Houdini, Maya, Arnold, Substance Painter, Photoshop
-                    <br>
-                    <br>
-                </p>
-            </div>
-            <div class = "eight wide column">
-                <p class = "other-text">
-                    Inquiry using Houdini. <br>
-                    Generative Art and sampling from the greats.
-                </p>
-            </div>
-        </div>
-        <!--
-
-        <div class="ui stackable equal height two column grid container">
             
-            <div class = "three wide column " >
-
-                <div class = "projectcaption"> 
-                    What does it mean to own a piece of art? What are the consequences of digitizing art?
+            <div class = "six wide column project_caption">
+                <h1>
+                    The New Fragments
+                </h1>
+                <p>
+                    What does it mean to own a piece of art?
+                    <br>
                     <br>
                     I developed a 3D pixelization process in Houdini using 3D noises and volume calculations. This is a process that allows for gradation in the pixelization, creating a unique animated effect.
                     I ran that on a variety of recognizable sculptures, and then paired them with philosophical fragments from Friedrich Schlegel's Philosophical Fragments.
                     This was designed into a deck of cards and printable posters.
                     <br>
                     <br>
+
                     Tools used: Houdini, Maya, Arnold, Substance Painter, Photoshop
                     <br>
                     <br>
-                </div>
+                </p>
             </div>
         </div>
-        -->
+    </div>
+
+
+    </div>
+</div>
+<div class = "container containerleft">
+    <div id = "images" class = "gallery">
 
         <div class="ui stackable equal width two column grid container" style= "background-color: black;">
             <div class = "column">
@@ -120,7 +73,6 @@
         </div>
         
     <div class="ui stackable equal width two column grid container" >
-        
         <div class = "column" style="text-align: center;">
             <img src = "../../static/img/work/nft/cards.png" style="width: 40%">
         </div>
@@ -135,14 +87,11 @@
     </div>
     <div class="ui stackable equal width two column grid container" >
         <div class = "column">
-
             <img src = "../../static/img/work/nft/houd.png">
         </div>
         <div class = "column">
             <img src = "../../static/img/work/nft/houd2.png">
         </div>
-    </div>
-    <div class="ui stackable equal width two column grid container">
     </div>
 </div>
 

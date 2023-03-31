@@ -18,146 +18,11 @@
 
 </head>
 
-<!--
 
 
-<script type="module">
-
-    //import * as THREE from '../build/three.module.js';
-
-    //import { OrbitControls } from './jsm/controls/OrbitControls.js';
-    //import { KMZLoader } from './jsm/loaders/KMZLoader.js';
-    //import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
-
-    let camera, scene, renderer, controls;
-    var mixerUpdateDelta = new THREE.Clock();        
-    let mixer;
-
-    init();
-
-    function init() {
-
-        scene = new THREE.Scene();
-        //scene.background = new THREE.Color( 0xFFFFFF );
-
-        const light = new THREE.PointLight( 0xFFFFFF, 1, 100 );
-        const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
-        material.flatShading = true;
-
-        light.position.set( 0, 20, 10);
-        light.intensity = 2;
-        const light2 = new THREE.AmbientLight( 0x404040 ); // soft white light
-        light2.intensity = 0;
-        scene.add( light2 );
-
-        scene.add( light );
-        let container = document.getElementById('canvasbox');
-
-        camera = new THREE.PerspectiveCamera( 20, $(container).width() / $(container).height(), 1, 500 );
-
-        camera.position.y = 2;
-        camera.position.z = 25  ;
-
-        scene.add( camera );
-
-        const grid = new THREE.GridHelper( 50, 50, 0xffffff, 0x555555 );
-        //scene.add( grid );
-
-
-        renderer = new THREE.WebGLRenderer( { antialias: true , alpha: true} );
-        renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( $(container).width(), $(container).height() );
-
-        container.appendChild( renderer.domElement );
-
-        const loader = new THREE.GLTFLoader();
-        loader.load( '../static/3d/finalface.glb', function ( kmz ) {
-            kmz.scene.traverse( function ( child ) {
-                if ( child.isMesh ) {
-                    const wireframe = new THREE.WireframeGeometry( child.geometry );
-                    const line = new THREE.LineSegments( wireframe );
-                    line.material.depthTest = true;
-                    line.material.opacity = 1;
-                    line.material.transparent = true;
-                    mixer = new THREE.AnimationMixer(kmz.scene);
-	                //mixer.clipAction(kmz.animations[0]).play();
-
-                    var color = new THREE.Color( 0x000000 );
-                    line.material.color = color;
-                    line.position.y = 0.5;
-                    line.scale.set(1500, 1500, 1500);
-                    scene.add( line );
-
-                }
-            })
-            kmz.scene.position.y = 0.5;
-            kmz.scene.scale.set(1500, 1500, 1500);
-
-
-            scene.add( kmz.scene );
-            //scene.add( line );
-
-            kmz.scene.traverse((o) => {
-  if (o.isMesh) o.material = material;
-});
-            Animate();
-
-        } );
-
-        controls = new THREE.OrbitControls( camera, renderer.domElement );
-        controls.addEventListener( 'change', render );
-        controls.enabled = false;
-        controls.update();
-
-        window.addEventListener( 'resize', onWindowResize );
-        window.addEventListener('mousemove', mouseMove)
-
-    }
-    function Animate() {
-        if(typeof mixer !== "undefined") mixer.update( mixerUpdateDelta.getDelta());
-        requestAnimationFrame(Animate);
-        render();
-  }
-    function mouseMove(e) {
-        let part2 = e.clientY/window.innerHeight;
-        let part = e.clientX/window.innerWidth;
-        camera.position.x = 20 * -part + 10;
-        camera.position.y = 10 * part2 +0   ;
-
-        controls.update()
-
-        render();
-    }
-    function onWindowResize() {
-        let container = document.getElementById('canvasbox');
-
-        camera.aspect = window.$(container).width() / $(container).height();
-        camera.updateProjectionMatrix();
-
-        renderer.setSize( $(container).width(), $(container).height() );
-
-        render();
-
-    }
-
-    function render() {
-
-        renderer.render( scene, camera );
-
-    }
-
-</script>
--->
-
-<div class="ui text compact fixed top menu">
-    <a href = "../index.html" class="item" style = "visibility: visible;"> 
-        <img src="../static/logo/logo.svg" id = "sitelogo">
-    </a>
-    <div class = "ui right menu">
-        <a  href = "/templates/about.html" class="item active">about</a>
-    </div>
-
-</div>
+<a href = "../../index.html">
+    <img id="logo" src = "../../static/logo/white-logo.svg" >
+</a>
 
 <div class = "container aboutcontainer">
 <div class="ui stackable two equal width column centered grid container" >
@@ -192,14 +57,6 @@
                     </a>
                 </div>
                 
-
-            <!--
-
-            <div class="ui  divider "></div>
-                <div class = "projectcaption" style = "margin-top: 0px !important;top: 100%;">         My Personal Introduction for my SVA application is here:
-                    <a href = "/templates/intro.html">LINK</a>
-                </div>
-                            -->
 
             </div>
         

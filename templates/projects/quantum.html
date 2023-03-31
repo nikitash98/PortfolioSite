@@ -25,25 +25,10 @@
 
     </script>
 
-<!--
 
-<div class="ui text fixed top menu">
-
-    <a href = "../../index.html" class = "item" style = "visibility: visible;">
-        <img src="/static/logo/logo.svg" id = "sitelogo">
-    </a>
-
-    <div class = "ui right menu" style="background-color: transparent !important;">
-
-        <a  href = "../about.html" class="item">about</a>
-    
-    </div>
-
-</div>
--->
 <a href = "../about.html">
     
-<img id="info" src ="../../static/icons/info.svg" >
+<img id="info" src ="../../static/icons/info-outline.svg" >
 </a>
 
 
@@ -52,15 +37,30 @@
 </a>
 
 <div class = "project-cover">
-    <video src = "../../static/img/work/nerf/nerf.mp4" autoplay controls muted loop width="100%" > </video>
+    <video src = "../../static/img/work/nerf/nerf.mp4" autoplay muted loop width="100%" > </video>
+    <div style="position: absolute; color: white; text-align: center; bottom: 0;">
+        <div class = "containerleft">
 
+        <div class="ui stackable grid container">
+            
+            <div class = "six wide column project_caption">
+                <h1>
+                    Quantum Jam: N.E.R.F
+                </h1>
+                <p>
+                    My contribution on a team for the IBM + Touchdesigner Quantum Design Jam challenge.
+                    <br>
+                    <br>
+                    I used the NERF process, and set up NVIDIA's codebase to generate ephemeral, painterly
+                    scenes. The concept was to use quantum information to allow the computer to decide whether 
+                    to display. I used both rendered video from within the NERF application, and the NERF 3D information
+                    to create a novel way to transition between scenes.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-<p class="caption">
-    Unmute this video to listen to the audio effect.
-    <br>
-    The Touchdesigner process - loaded with NERF videos and 3D scene information - Touchdesigner is able to transition
-    between two videos. 
-</p>
+
 <div class = "container containerleft">
 
     <div id = "images" class = "gallery">
@@ -75,29 +75,7 @@
         <div class = "separator">
 
         </div>
-        <h1>Quantum Jam: Nerf Exploration </h1>
 
-        <div class="ui stackable grid container">
-            
-            <div class = "eight wide column">
-                <p>
-                    My contribution on a team for the IBM + Touchdesigner Quantum Design Jam challenge.
-                    I used the NERF process, and set up NVIDIA's codebase to generate ephemeral, painterly
-                    scenes. The concept was to use quantum information to allow the computer to decide whether 
-                    to display. I used both rendered video from within the NERF application, and the NERF 3D information
-                    to create a novel way to transition between scenes.
-                </p>
-            </div>
-            <div class = "eight wide column">
-                <p class = "other-text">
-                    Using NVIDIA NERF and quantum computing to generate computer dreams.<br>
-                    <br>
-                    Blending 3D and Video
-                
-                     
-                </p>
-            </div>
-        </div>
         <div style="text-align: left">
                 <div class="ui stackable grid container">
             <div class = "eight wide column">
@@ -116,7 +94,7 @@
         
         <div class = "ui horizontal divider header">Captured Videos</div> 
 
-        <p>
+        <p class = "project_description">
             These are some of the captured NERF videos. I purposefully took less images than the process
             recommended. The effect of a lack of information is a beautiful, digital fog. Like a vague daydream.
         </p>

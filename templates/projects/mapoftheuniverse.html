@@ -8,6 +8,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
         <script src  = "https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.2/viewer.js"></script>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
     </head>
     <style>
         body {
@@ -41,7 +42,6 @@
     // Then, show one image by click it, or call `gallery.show()`.
 
     </script>
-    <body>
 
 
 <!--
@@ -61,69 +61,68 @@
 -->
 
     <a href = "../about.html">
-        <img id="info" src ="../../static/icons/info.svg" >
+        <img id="info" src ="../../static/icons/info-outline.svg" >
     </a>
     
     <a href = "../../index.html">
         <img id="logo" src = "../../static/logo/white-logo.svg" >
     </a>
+
 <div class = "project-cover">
-    <div style="position: absolute; top: 50%; left: 45%; color: white; text-align: center;">
-        Each point on this screen is a galaxy.
-        <br>
-        Scroll down to learn more.
-    </div>
     <video width="100%"  autoplay loop muted  style="object-position: 50% 20%;">
         <source src="../../static/img/work/mapofuniverse/Video Fixed.mp4" type="video/mp4">
       Your browser does not support the video tag.
-      </video></div>
-<div class = "container containerleft">
-    <div class ="separator">
+      </video>
+    
+    <div style="position: absolute; color: white; text-align: center; bottom: 0;">
+        <div class = "containerleft">
+        <div class="ui stackable grid container">
+            <div class = "six wide column project_caption">
+                <h1>
+                    Map of the Observable Universe
+                </h1>
+                <p>
+                    You are now looking at thousands of galaxies visualized on your screen.
+                    <br>
+                    <br>
+                    Created with Dr. Brice Menard, an astrophysicist at Johns Hopkins University, the Map of the Universe shows hundreds of thousands of Galaxies, reaching back to the very first flash
+                    of light, emanating from the Big Bang. 
+                    <br>
+                    <br>
+                    Please visit the website to learn more: <a href = "http://mapoftheuniverse.net">mapoftheuniverse.net</a>.
+                    <br>
+                    <br>
+                    Tools used: Python, Pandas, Matplotlib
 
+                </p>
+            </div>
+        </div>
     </div>
+</div>
+
+    
+</div>
+<div class = "container containerleft">
     <div id = "images" class = "gallery">
         
         <div class = "img-gallery" style="background-color: black; padding-top: 2%; padding-bottom: 2%">
             <div class = "image-set">
-                <img src = "../../static/img/work/mapofuniverse/mainmap.png">
+                <img src = "../../static/img/work/mapofuniverse/mainmap.png">  
+
                 <p class = "caption">
                     The map of the universe. This slice shows 200,000 galaxies from our nearest neighbors, to the furthest 
                     reaches of the universe.
                 </p>
             </div>
         </div>
-        <div class = "separator">
 
-        </div>
-        <h1>
-            Map of the Observable Universe
-        </h1>
-        <div class="ui stackable grid container">
-            <div class = "eight wide column">
-                <p>
-                    This is the largest possible map that can be compiled.
-                    <br>
-                    <br>
-                    This is a project I was lucky enough to work on with Dr. Brice Ménard, an astrophysicist at Johns Hopkins University.
-                    We have created a range of visuals to describe the vast structure of the universe. The map reaches back to the very first flash
-                    of light, emanating from the Big Bang. Our flagship is our website: <a href = "http://mapoftheuniverse.net">mapoftheuniverse.net</a>.
-                </p>
-            </div>
-            <div class = "eight wide column">
-                <p class = "other-text">
-                    A data visualization on the largest scale. <br>
-                    An interactive website.
-                </p>
-            </div>
-        </div>
-
-        <div class = "separator">
         </div>
         <div style="text-align: center;">
             <iframe width="50%" height="500px" src="https://www.youtube.com/embed/Oekma9SZMMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class = "ui horizontal divider header">Visuals</div> 
         <div class = "big-image-gallery">
+
+            
             <div class = "image-set">
                 <img src = "../../static/img/work/mapofuniverse/horizontal.png">  
                 <p class = "caption">
@@ -144,49 +143,34 @@
                 </p>
             </div>  
         </div>
-
-        <div class = "ui horizontal divider header">Web Development</div> 
-        <p> The website was developed to be interactive, but simple. The idea was to provoke curiosity, without
-            losing the central point.
-
-            <div class = "big-image-gallery">
-                <div class = "image-set">
-                    <img src = "../../static/img/work/mapofuniverse/horizontal.png">  
-                    <p class = "caption">
-                        The banner view of the universe - a long poster meant to be printed large and enjoyed.
-                    </p>
-        
-                </div>
-                <div class = "image-set">
-                    <img src = "../../static/img/work/mapofuniverse/Universe_3D.jpg">
-                    <p class = "caption">
-                        The observable universe seen as a sphere. The highlighted section represents our slice. The edge is the Cosmic Microwave Background.
-                    </p>
-                </div>  
-                <div class = "image-set">
-                    <img src = "../../static/img/work/mapofuniverse/CMB_3D.jpg">
-                    <p class = "caption">
-                        The Cosmic Microwave Background is the radioactive backdrop of our universe. It is an emission of light from around the time of the Big Bang.
-                    </p>
-                </div>  
-            </div>
-        </p>
+       
         <div class = "ui horizontal divider header">Press</div> 
-        <p> Our release was a great success - and we were lucky to have been featured in a good amount of press.
-            <br>
-            <br>
+        <ul>
+            <li>
+                <a href = "https://www.fastcompany.com/90819258/map-of-the-universe">Fast Company</a>
+            </li>
+            <li>
+                <a href = "https://www.itsnicethat.com/news/nikita-shtarkman-brice-menard-the-map-of-the-universe-digital-231122">It's Nice That</a>
+            </li>
 
-            Here are some links to some lovely articles:
-            <br>
-            <a href = "https://www.fastcompany.com/90819258/map-of-the-universe?partner=rss&utm_source=rss&utm_medium=feed&utm_campaign=rss+fastcompany&utm_content=rss"> Fast Company.</a>
-        </p>
+            <li>
+                <a href = "https://www.collide24.org/interactive/map-of-universe-brice-menard-nikita-shtarkman/">Collide24</a>
+            </li>
+            <li>
+                <a href="https://hub.jhu.edu/2022/11/17/interactive-universe-map/">JHU Hub</a>
+            </li>
+            <li>
+                <a href="https://phys.org/news/2022-11-scroll-universe-interactive.html">Phys.org</a>
 
+            </li>
+
+            
+        </ul>
     </div>
 
 </div>
 
 </div>
-</body>
 
 
 </html>

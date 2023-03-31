@@ -12,37 +12,13 @@
     </head>
     <script type="module">
 
-    // View an image.
-
-    // Then, show the image by clicking it, or call `viewer.show()`.
-    
-    // View a list of images.
-    // Note: All images within the container will be found by calling `element.querySelectorAll('img')`.
     const gallery = new Viewer(document.getElementById('images'), {toolbar: 0});
-    // Then, show one image by click it, or call `gallery.show()`.
 
     </script>
 
 
-<!--
-
-<div class="ui text fixed top menu">
-
-    <a href = "../../index.html" class = "item" style = "visibility: visible;">
-        <img src="/static/logo/logo.svg" id = "sitelogo">
-    </a>
-
-    <div class = "ui right menu" style="background-color: transparent !important;">
-
-        <a href = "../work.html"  class="active item" >PROJECTS</a>
-        <a  href = "../about.html" class="item">ABOUT</a>
-    
-    </div>
-</div>
--->
-
 <a href = "../about.html">
-    <img id="info" src ="../../static/icons/info.svg" >
+    <img id="info" src ="../../static/icons/info-outline.svg" >
 </a>
 
 <a href = "../../index.html">
@@ -52,51 +28,42 @@
     <video width="100%"  autoplay loop muted  style="object-position: 50% 50%;">
         <source src="../../static/img/work/nike/Shoes3_1.MP4" type="video/mp4">
       Your browser does not support the video tag.
-      </video>   </div>
+      </video>   
+
+      <div style="position: absolute; color: white; text-align: center; bottom: 0;">
+        <div class = "containerleft">
+
+        <div class="ui stackable grid container">
+            
+            <div class = "six wide column project_caption">
+                <h1>
+                    Nike Off-White Blazers
+                </h1>
+                <p>
+                    A pair of high quality, photoreal Nike Blazers. 
+                    <br>
+                    <br>This was a project to study how to organically sculpt footwear in Zbrush. It became a great texture study as well, as I worked to generate the very specific Off-White textures using the Substance suite. 
+                    <br>
+                    <br>
+                    Tools used: Zbrush, Maya, Arnold, Substance Designer, Substance Painter, Photoshop
+        
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</div>
 <div class = "container containerleft">
 
     <div id = "images" class = "gallery">
-        <h1>NIKE OFF-WHITE BLAZERS</h1>
-        <p>
-            A pair of high quality, photoreal Nike Blazers. 
-            <br>
-            <br>This was a project to study how to organically sculpt footwear in Zbrush. It became a great texture study as well, as I worked to generate the very specific Off-White textures using the Substance suite. 
-            <br>
-            <br>
-            Tools used: Zbrush, Maya, Arnold, Substance Designer, Substance Painter, Photoshop
-        </p>
 
         <div class = "big-image-gallery">
             <img src = "../../static/img/work/nike/one.jpg">    
             <img src = "../../static/img/work/nike/two.jpg">
         </div>
-        <!--
 
-        <div class="ui stackable equal height  grid container">
-            <div class = "three wide column ">
-                <div class = "projectcaption"> 
-                    <div class = "head"></div>
-                    
-                 </div>
-            </div>
-            <div class = "ten wide column">
-                <video width="100%"  autoplay loop muted controls>
-                    <source src="../../static/img/work/nike/Shoes3_1.MP4" type="video/mp4">
-                  Your browser does not support the video tag.
-                  </video>   
-            </div>
-
-
-        <div class = "two column row">
-            <div class = "column">
-                <img src = "../../static/img/work/nike/one.jpg">
-            </div>
-        <div class = "column">
-            <img src = "../../static/img/work/nike/two.jpg">
-        </div>
-        -->
-
-        </div>
         <div class = "one column row">
             <div class = "column">
                 <img src = "../../static/img/work/nike/wire.jpg">

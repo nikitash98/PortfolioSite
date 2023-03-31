@@ -12,101 +12,82 @@
 
     </head>
     <script type="module">
-
-    // View an image.
-
-    // Then, show the image by clicking it, or call `viewer.show()`.
-    
-    // View a list of images.
-    // Note: All images within the container will be found by calling `element.querySelectorAll('img')`.
-    const gallery = new Viewer(document.getElementById('images'), {toolbar: 0});
-    // Then, show one image by click it, or call `gallery.show()`.
-
+        const gallery = new Viewer(document.getElementById('images'), {toolbar: 0});
     </script>
 
 
-<!--
-
-<div class="ui text fixed top menu">
-
-    <a href = "../../index.html" class = "item" style = "visibility: visible;">
-        <img src="/static/logo/logo.svg" id = "sitelogo">
+    <a href = "../about.html">
+        <img id="info" src ="../../static/icons/info.svg" >
     </a>
 
-    <div class = "ui right menu" style="background-color: transparent !important;">
+    <a href = "../../index.html">
+        <img id="logo" src = "../../static/logo/white-logo.svg" >
+    </a>
+    <div class = "project-cover">
+        <img src = "../../static/img/work/sneakers/cover.png" style="object-position: 50% 50%;">
+        <div style="position: absolute; color: white; text-align: center; bottom: 0;">
+            <div class = "containerleft">
 
-        <a  href = "../about.html" class="item">about</a>
-    
+            <div class="ui stackable grid container">
+                
+                <div class = "six wide column project_caption">
+                    <h1>
+                        LV JASPERS
+                    </h1>
+                    <p>
+                        A photorealistic pair of game-ready, VR-capable Louis Vuitton X Kanye Jaspers. 
+                        These were modeled and textured for a freelance client for use in VRChat. 
+                        The poster was designed in Illustrator.
+                        <br>
+                        <br>
+                        Textures were either generated from photographic reference, or procedurally with Substance Designer.
+
+                        <br>
+                        <br>
+                        Tools used: Zbrush, Maya, Arnold, Substance Painter, Substance Designer, Photoshop
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
--->
-
-<a href = "../about.html">
-    <img id="info" src ="../../static/icons/info.svg" >
-</a>
-
-<a href = "../../index.html">
-    <img id="logo" src = "../../static/logo/white-logo.svg" >
-</a>
-<div class = "project-cover">
-    <img src = "../../static/img/work/sneakers/cover.png" style="object-position: 50% 50%;">
-</div>
+<br>
 <div class = "container containerleft">
-
     <div id = "images" class = "gallery">
-        <div class="ui stackable equal height  grid container">
-            <div class = "three wide column ">
-                <div class = "projectcaption"> 
-                    <div class = "head">LV JASPERS</div>
-                    A photorealistic pair of game-ready, VR-capable Louis Vuitton X Kanye Jaspers. 
-                    These were modeled and textured for a freelance client for use in VRChat. 
-                    The poster was designed in Illustrator.
-                    <br>
-                    <br>
-                    Textures were either generated from photographic reference, or procedurally with Substance Designer.
-
-                    <br>
-                    <br>
-                    Tools used: Zbrush, Maya, Arnold, Substance Painter, Substance Designer, Photoshop
-                 </div>
-            </div>
-            <div class = "ten wide column">
-            </div>
-            <div class = "big-image-gallery">
-    <img src = "../../static/img/work/sneakers/cover.png" style="object-position: 50% 50%;">
-
-                <img src = "../../static/img/work/sneakers/one angle2.png">
-
-                <img src = "../../static/img/work/sneakers/angleother.png">  
-                <img src = "../../static/img/work/sneakers/unreal.png">
-                <div class="sketchfab-embed-wrapper"> <iframe style ="width: 100%; height: 1000px;"title="ZDFRS" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c6299633c4bb4ba097e7910b94fa9d89/embed"> </iframe> </div>
-                <img src = "../../static/img/work/sneakers/unreal.png">
-                <img src = "../../static/img/work/sneakers/close.png">
-                <img src = "../../static/img/work/sneakers/HighresScreenshot00002.png">
-    
-            </div>
-        <div class = "one column row">
+        <div class="ui stackable equal width two column grid container">
             <div class = "column">
-                <img src = "">
+                <div class="sketchfab-embed-wrapper"> <iframe style ="width: 100%; height: 1000px;"title="ZDFRS" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c6299633c4bb4ba097e7910b94fa9d89/embed"> </iframe> </div>
             </div>
-        <div class = "column">
+    
         </div>
-        <div class = "column">
+        <div class="ui stackable equal width two column grid container" style= "background-color: black;">
+            <div class = "column" style="text-align: center;" >
+                <img src = "../../static/img/work/sneakers/cover.png" style="width: 40%;">
+            </div>
         </div>
-
-        <div class = "column">
+        <div class="ui stackable equal width two column grid container">
+            <div class = "column">
+                <img src = "../../static/img/work/sneakers/one angle2.png">
+            </div>
         </div>
-        <div class = "column">
-        </div>
-        <div class = "column">
+        
+    <div class="ui stackable equal width two column grid container" >
+        <div class = "column" style="text-align: center;">
+                <img src = "../../static/img/work/sneakers/unreal.png">
         </div>
     </div>
 
+    <div class="ui stackable equal width two column grid container">
+        <div class = "column">
+            <img src = "../../static/img/work/sneakers/close.png">
+        </div>
     </div>
 
-</div>
-
+    <div class="ui stackable equal width two column grid container" >
+        <div class = "column">
+            <img src = "../../static/img/work/sneakers/HighresScreenshot00002.png">
+        </div>
+    </div>
 </div>
 
 </html>
